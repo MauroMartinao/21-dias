@@ -1,0 +1,3 @@
+git add: manda para stagin area
+git commit -m "texto": manda para o repositorio
+git push origin master: manda as alteraçoes
