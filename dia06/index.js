@@ -31,3 +31,12 @@
 //        console.log(i + " x " + j + " = " + (i * j))
 //    }
 //}
+
+// let a = Number(prompt("insira o numero")); 
+// for (let i = a ; i <= a + 2; i++){ 
+//     console.log("Tabuada do: " + i);
+// 
+//     for (let j = 0 ; j <= 10 ; j++){
+//         console.log(i + " x " + j + " = " + (i*j))
+//         }
+// }
