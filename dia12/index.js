@@ -95,42 +95,41 @@
 // 
 
 // EXERCICIO 3
+class Corrida {
+    constructor(nome, tipo, distancia, participantes, vencedor){
+        this.nome = nome;
+        this.tipo = tipo;
+        this.distancia = distancia;
+        this.participantes = participantes;
+        this.vencedor = vencedor; 
+    }
 
-// class Corrida {
-//     constructor(nome, tipo, distancia, participantes, vencedor){
-//         this.nome = nome;
-//         this.tipo = tipo;
-//         this.distancia = distancia;
-//         this.participantes = participantes; // Corrigido
-//         this.vencedor = vencedor; // Corrigido
-//     }
-// 
-//     DefinirVencedor(){
-//         let menorTempo = this.participantes[0].CalcularTempoMedio(this.distancia);
-//         let vencedor = this.participantes[0];
-// 
-//         for (let index = 1 ; index < this.participantes.length ; index++) {
-//             let tempo = this.participantes[index].CalcularTempoMedio(this.distancia); // Corrigido
-//             if (tempo < menorTempo) { // Adicionado
-//                 menorTempo = tempo; // Corrigido
-//                 vencedor = this.participantes[index]; // Corrigido
-//             }
-//         }
-// 
-//         return this.vencedor = vencedor; // Movido para dentro do método
-//     }
-// 
-//     ExibirVencedor(){
-//         alert("O vencedor é " + this.vencedor.nome); // Corrigido
-//     }
-// }
-// 
-// let corrida = new Corrida("Monza", "Formula 1", 60000, [], null); // Certifique-se de passar um array vazio para participantes e null para vencedor
-// 
-// corrida.participantes = [];
-// corrida.participantes[0] = new Carro("kicks", 120, 160, 5);
-// corrida.participantes[1] = new Carro("marea", 210, 200, 9); // Corrigido o índice
-// corrida.participantes[2] = new Carro("peugeot 206", 300, 220, 10); // Corrigido o índice
-// 
-// corrida.DefinirVencedor();
-// corrida.ExibirVencedor();
+    DefinirVencedor(){
+        let menorTempo = this.participantes[0].CalcularTempoMedio(this.distancia);
+        let vencedor = this.participantes[0];
+
+        for (let index = 1 ; index < this.participantes.length ; index++) {
+            let tempo = this.participantes[index].CalcularTempoMedio(this.distancia);
+            if (tempo < menorTempo) { 
+                menorTempo = tempo; 
+                vencedor = this.participantes[index]; 
+            }
+        }
+
+        return this.vencedor = vencedor; 
+    }
+
+    ExibirVencedor(){
+        alert("O vencedor é " + this.vencedor.nome); 
+    }
+}
+
+let corrida = new Corrida("Monza", "Formula 1", 60000, [], null); 
+
+corrida.participantes = [];
+corrida.participantes[0] = new Carro("kicks", 120, 160, 5);
+corrida.participantes[1] = new Carro("marea", 210, 200, 9); 
+corrida.participantes[2] = new Carro("peugeot 206", 300, 220, 10); 
+
+corrida.DefinirVencedor();
+corrida.ExibirVencedor();
